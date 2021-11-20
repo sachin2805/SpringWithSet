@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="com.bean.Player" id="p1">
+	<property name="jno" value="07"></property>
+	<property name="pname" value="Dhoni"></property>
+	</bean>
+	
+	<bean class="com.bean.Player" id="p2">
+	<property name="jno" value="18"></property>
+	<property name="pname" value="Virat"></property>
+	</bean>
+	
+	<bean class="com.bean.Player" id="p3">
+	<property name="jno" value="45"></property>
+	<property name="pname" value="Rohit"></property>
+	</bean>
+	
+	<bean class="com.bean.CriketTeam" id="ct1">
+	<property name="CountryName" value="India"></property>
+	<property name="CoachNAme" value="Ravi"></property>
+	<property name="Players">
+	<set>
+	<ref bean="p1"/>
+	<ref bean="p2"/>
+	<ref bean="p3"/>
+	</set>
+	</property>
+	</bean>
+</beans>
